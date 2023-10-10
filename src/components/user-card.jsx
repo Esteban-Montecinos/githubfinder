@@ -17,7 +17,7 @@ export default function UserCard({
   following,
 }) {
   return (
-    <Atropos activeOffset={40} shadowScale={1.05} rotateTouch className="w-full h-full rounded-md">
+    <Atropos activeOffset={40} shadowScale={1.05} component="article" className="w-full h-full rounded-md">
       <Card
         isBlurred
         className="w-full max-w-xl border-none bg-background/60 dark:bg-default-100/50"
