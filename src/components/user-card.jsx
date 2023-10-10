@@ -22,8 +22,9 @@ export default function UserCard({
         isBlurred
         className="w-full max-w-xl border-none bg-background/60 dark:bg-default-100/50"
         shadow="sm"
+        data-atropos-offset="-3"
       >
-        <CardBody className="p-2">
+        <CardBody className="p-2" data-atropos-offset="0">
           <div className="flex flex-row items-center gap-6 px-2 py-2 md:px-4">
             <Image
               alt={name}
@@ -35,7 +36,7 @@ export default function UserCard({
             />
 
             <div className="flex flex-col gap-2">
-              <h3  className="text-base font-medium md:text-xl text-foreground/90">
+              <h3 data-atropos-offset="3" className="text-base font-medium md:text-xl text-foreground/90">
                 {name}
               </h3>
               <a
