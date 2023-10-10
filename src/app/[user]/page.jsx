@@ -5,10 +5,9 @@ import CopiarPortapapeles from "@/components/copiar-portapapeles";
 import CopiarURL from "@/components/copiar-url";
 import UserCard from "@/components/user-card";
 export async function generateMetadata({ params: { user } }) {
-  const {name, bio} = await getUser(user);
+  const {name} = await getUser(user);
   return {
-    title: "GitHub Finder | "+ name,
-    description: bio
+    title: "GitHub Finder | "+ name
   };
 }
 export default async function page({ params: { user } }) {
