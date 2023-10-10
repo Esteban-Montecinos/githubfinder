@@ -4,7 +4,12 @@ import { redirect } from "next/navigation";
 import CopiarPortapapeles from "@/components/copiar-portapapeles";
 import CopiarURL from "@/components/copiar-url";
 import UserCard from "@/components/user-card";
-
+export async function generateMetadata({ params: { user } }) {
+  const {name} = await getUser(user);
+  return {
+    title: "GitHub Finder | "+ name,
+  };
+}
 export default async function page({ params: { user } }) {
   const {
     name,
